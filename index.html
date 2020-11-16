@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <title>MY WEBSITE FOR FLEXBOX</title>
+    <!-- ffb703 -->
+    <!-- 400,700 -->
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Goldman', cursive;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            border: 3px solid black;
+            border-radius: 20px;
+        }
+        h1{
+            font-weight:700;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .left {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .grow {
+            flex-grow: 1;
+        }
+
+        .txt {
+            width: 300px;
+
+        }
+
+        .order-left {
+            order: -1;
+        }
+
+
+        .two {
+            flex-direction: row-reverse;
+        }
+        img{
+            width:100%;
+            height:100%;
+        }
+        span{
+            color:#ffb703;
+        }
+        @media screen and (max-width: 480px){
+            body{
+                margin:10px;
+            }
+            .container,.right{
+                flex-direction:column;
+            }
+            
+            .left{
+                display:block;
+            }
+            .two{
+                margin-top:50px;
+                background: #f5f5f5;
+            }
+            .txt{
+                font-weight:400;
+            }
+            center{
+                display:none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="up">
+        <div class="left grow">
+            <div class="txt">
+                <h1 class="title">
+                    You're Here Because You <span>Like MR.FORK</span>
+                </h1>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod placeat sed quia nam, eius
+                    illum dolorum iusto ipsam minus repellat sint delectus, molestias rem reiciendis laboriosam totam
+                    tempora explicabo.
+                </p>
+                
+                <center><a href="#down"><i class="fas fa-long-arrow-alt-down"></i></a></center>
+            </div>
+        </div>
+
+        <div class="right grow">
+            <img src="backgroundflex.svg">
+        </div>
+    </div>
+
+    <div class="container two" id="down">
+        <div class="left grow order-left">
+            <div class="txt">
+                <h1 class="title">
+                    HI I AM MR.FORK. YOU <span>EAT WITH ME!</span>
+                </h1>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod placeat sed quia nam, eius
+                    illum dolorum iusto ipsam minus repellat sint delectus, molestias rem reiciendis laboriosam totam
+                    tempora explicabo.
+                </p>
+                
+                <center><a href="#up"><i class="fas fa-arrow-up"></i></a></center>
+            </div>
+        </div>
+
+        <div class="right grow">
+            <img src="backgroundflex.svg">
+        </div>
+    </div>
+</body>
+
+</html>
